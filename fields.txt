@@ -1,0 +1,228 @@
+{
+  "animCommand1": {
+    "type": "text",
+    "label": "Command Default Animation",
+   	"value": "!a1",
+   	"group": "Default Animation"
+  },
+  "animImage1": {
+    "type": "image-input",
+    "label": "Default Animation",
+	"group": "Default Animation"
+   },
+  "image1Size": {
+    "type": "slider",
+    "label": "Image Size (%)",
+    "value": 100,
+    "min": 1,
+    "max": 100,
+    "steps": 1,
+    "group":"Default Animation"  
+  },
+  "image1VertPos": {
+    "type": "slider",
+    "label": "Vertical pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Default Animation"  
+  },
+  "image1HorPos": {
+    "type": "slider",
+    "label": "Horizontal pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Default Animation"  
+  },
+  "anim1Time": {
+    "type": "number",
+    "label": "Animation Duration(seconds)",
+    "value": 4,
+    "group":"Default Animation"  
+  },
+  
+  "animCommand2": {
+    "type": "text",
+    "label": "Command Animation 2",
+    "value": "!a2",
+    "group": "Animation 2"
+  },
+  "animImage2": {
+    "type": "image-input",
+    "label": "Animation Variation 2",
+    "group": "Animation 2"
+   },
+  "image2Size": {
+    "type": "slider",
+    "label": "Image Size (%)",
+    "value": 100,
+    "min": 1,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 2"  
+  },
+  "image2VertPos": {
+    "type": "slider",
+    "label": "Vertical pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 2"  
+  }, 
+  "image2HorPos": {
+    "type": "slider",
+    "label": "Horizontal pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 2"  
+  },  
+  "anim2Time": {
+    "type": "number",
+    "label": "Animation Duration(seconds)",
+    "value": 4,
+    "group":"Animation 2"  
+  },
+  
+   "animCommand3": {
+    "type": "text",
+    "label": "Command Animation 3",
+    "value": "!a3",
+    "group": "Animation 3"
+  },
+  "animImage3": {
+    "type": "image-input",
+    "label": "Animation Variation 3",
+    "group": "Animation 3"
+   },
+  "image3Size": {
+    "type": "slider",
+    "label": "Image Size (%)",
+    "value": 100,
+    "min": 1,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 3"  
+  },
+  "image3VertPos": {
+    "type": "slider",
+    "label": "Vertical pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 3"  
+  }, 
+  "image3HorPos": {
+    "type": "slider",
+    "label": "Horizontal pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 3"  
+  },
+   "anim3Time": {
+    "type": "number",
+    "label": "Animation Duration(seconds)",
+    "value": 4,
+    "group":"Animation 3"  
+  },
+  
+  
+    "animCommand4": {
+    "type": "text",
+    "label": "Command Animation 4",
+    "value": "!a4",
+    "group": "Animation 4"
+  },
+  "animImage4": {
+    "type": "image-input",
+    "label": "Animation Variation 4",
+    "group": "Animation 4"
+   },
+  "image4Size": {
+    "type": "slider",
+    "label": "Image Size (%)",
+    "value": 100,
+    "min": 1,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 4"  
+  },
+  "image4VertPos": {
+    "type": "slider",
+    "label": "Vertical pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 4"  
+  }, 
+  "image4HorPos": {
+    "type": "slider",
+    "label": "Horizontal pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 4"  
+  },
+  "anim4Time": {
+    "type": "number",
+    "label": "Animation Duration(seconds)",
+    "value": 4,
+    "group":"Animation 4"  
+  },
+  
+    "animCommand5": {
+    "type": "text",
+    "label": "Command Animation 5",
+    "value": "!a5",
+    "group": "Animation 5"
+  },
+  "animImage5": {
+    "type": "image-input",
+    "label": "Animation Variation 5",
+    "group": "Animation 5"
+   },
+  "image5Size": {
+    "type": "slider",
+    "label": "Image Size (%)",
+    "value": 100,
+    "min": 1,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 5"  
+  },
+  "image5VertPos": {
+    "type": "slider",
+    "label": "Vertical pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 5"  
+  }, 
+  "image5HorPos": {
+    "type": "slider",
+    "label": "Horizontal pos. of the image (%)",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "steps": 1,
+    "group":"Animation 5"  
+  },
+  "anim5Time": {
+    "type": "number",
+    "label": "Animation Duration(seconds)",
+    "value": 4,
+    "group":"Animation 5"  
+  }
+  
+}

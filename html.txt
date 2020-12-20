@@ -1,0 +1,8 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+
+<div class="main-container"></div>
+<div id="image" class="fade">
+      <img id="realimg" src="" align="center" />
+</div>

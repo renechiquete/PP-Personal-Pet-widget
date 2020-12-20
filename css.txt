@@ -1,0 +1,12 @@
+#image {
+    z-index: 2;
+  	position: absolute;
+    width: 100%; 
+  	height: 100%;
+}
+#realimg {
+  	position: absolute;
+  	z-index: 2;
+  	display: block;
+  	vertical-align: middle;
+}

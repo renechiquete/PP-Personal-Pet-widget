@@ -1,0 +1,102 @@
+let fieldData={};
+let petData = {};
+let isPlaying = false;
+let queue = [];
+
+window.addEventListener('onWidgetLoad', function (obj) {
+  fieldData = obj.detail.fieldData;
+  
+  console.log("test");
+      for (let i = 1; i <= 5; i++) {
+        console.log("test before");
+        
+        if (fieldData[`animCommand${i}`].length === 0) continue;
+        console.log("test after length for "+i);
+        
+        
+	  	if (typeof fieldData[`animImage${i}`] === "undefined") continue;       
+        console.log("test after image validation for "+i);
+        
+        console.log("fieldData[`animCommand${i}`]="+fieldData[`animCommand${i}`].toLowerCase());
+        petData[fieldData[`animCommand${i}`].toLowerCase()] = {
+            "image": fieldData[`animImage${i}`],
+          	"imageSize": fieldData[`image${i}Size`],
+          	"verticalPos": fieldData[`image${i}VertPos`],
+          	"horizontalPos": fieldData[`image${i}HorPos`],
+          	"animationTime": fieldData[`anim${i}Time`]
+          	
+        };
+      }
+//Return to default animation
+setImage(fieldData[`animImage1`], fieldData[`image1Size`], fieldData[`image1VertPos`], fieldData[`image1HorPos`]);
+});
+
+window.addEventListener('onEventReceived', function (obj) {
+ 
+    //if (obj.detail.listener !== "message") return;
+  
+    const data = obj.detail.event.data;
+    //const service = obj.detail.event["service"] === "twitch" ? obj.detail.event["service"] : "other";
+    
+  
+        //console.log("Obj:"+JSON.stringify(obj.detail));
+
+
+        if (data["displayName"] === "StreamElements") return;
+  
+        const message = data["text"];
+        let command = message.split(" ")[0];
+  		command = command.toLowerCase();
+
+        if (data["displayName"] === "StreamElements") return;
+        
+  		//let badge1, badge2, badge3 = '';
+        
+  		//if (data["badges"][0]["type"])
+          //badge1 = data["badges"][0]["type"];
+  
+        //if (command.toLowerCase() === customCommand && (badge1 === 'moderator' || badge1 === 'broadcaster')) {
+          //Remove '@' from the name, in the case it was sent in that way from chat
+          queue.push({command: command, trigger: "message"});
+          parseQueue();
+		// For when we need to make it update automatically setImage(petData[command].image, petData[command].imageSize, petData[command].verticalPos, petData[command].horizontalPos);
+});
+
+
+function petAction(command, trigger = "message") {
+  //console.log("Entered to PetAction");
+  let duration = 4
+  		if (command in petData) { 
+        	console.log("Command found in list: image is ="+petData[command].image+ ", petData[command].imageSize = "+ petData[command].imageSize+ ", petData[command].verticalPos="+petData[command].verticalPos);
+          	setImage(petData[command].image, petData[command].imageSize, petData[command].verticalPos, petData[command].horizontalPos);
+          	duration = petData[command].animationTime
+    	}
+    setTimeout(() => {
+        isPlaying = false;
+        parseQueue();   
+        
+    },  duration*1000 )
+}
+
+function setImage(imageURL, size=100, posVert=0, posHor=0) {
+	
+  	console.log("size = "+size+", posVert="+posVert+", posHor="+posHor);
+	let img = document.querySelector("img");
+  	img.setAttribute('style', `width: ${size}% ; top:${posVert}% ; left:${posHor}%`);
+    img.setAttribute("src", imageURL);
+}
+
+const parseQueue = () => {
+    if (isPlaying) return;
+    if (!queue.length) 
+    {
+    	setImage(fieldData[`animImage1`], fieldData[`image1Size`], fieldData[`image1VertPos`], fieldData[`image1HorPos`]);
+  		return;
+    }
+    isPlaying=true;
+    console.log("Playing new user");
+    const data = queue.shift();
+    petAction(data.command, data.trigger);
+
+}
+
